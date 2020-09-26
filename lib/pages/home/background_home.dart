@@ -15,8 +15,24 @@ class BackgroundHome extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          Center(
-            child: Text("j'ai faim"),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    labelText: 'Mot de passe',
+                    filled: true,
+                    fillColor: Colors.white),
+              )
+            ],
           ),
         ],
       ),
