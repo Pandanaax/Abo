@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'button.dart';
+
 class BackgroundHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,11 +29,17 @@ class BackgroundHome extends StatelessWidget {
                 ),
               ),
               TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(
-                    labelText: 'Mot de passe',
-                    filled: true,
-                    fillColor: Colors.white),
-              )
+                  labelText: 'Mot de passe',
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+              Row(children: <Widget>[
+                PrimaryButton(text: "Connexion"),
+                PrimaryButton(text: "Inscription"),
+              ])
             ],
           ),
         ],
