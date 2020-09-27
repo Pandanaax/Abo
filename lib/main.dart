@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myAbos/pages/home/background_home.dart';
+import 'package:myAbos/pages/home/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,9 +37,21 @@ class HomePage extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          child: BackgroundHome(),
+          child: Home(),
         ),
       ],
     );
   }
 }
+
+// @override
+// Widget build(BuildContext context) {
+//   return MaterialApp(
+//     home: Scaffold(
+//       appBar: AppBar(
+//         title: Text("Image from assets"),
+//       ),
+//       body: Image.asset('assets/others/LOGO.png'), //   <-- image
+//     ),
+//   );
+// }

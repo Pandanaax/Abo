@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'button.dart';
+import 'buttons.dart';
 
-class BackgroundHome extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -18,9 +18,14 @@ class BackgroundHome extends StatelessWidget {
             ),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.center,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                width: 200.0,
+                height: 300.0,
+                child: Image.asset('assets/others/logoAbo.png'),
+              ),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Email',
@@ -36,10 +41,12 @@ class BackgroundHome extends StatelessWidget {
                   fillColor: Colors.white,
                 ),
               ),
-              Row(children: <Widget>[
-                PrimaryButton(text: "Connexion"),
-                PrimaryButton(text: "Inscription"),
-              ])
+              Row(
+                children: <Widget>[
+                  PrimaryButton(text: "Connexion"),
+                  PrimaryButton(text: "Inscription"),
+                ],
+              ),
             ],
           ),
         ],
