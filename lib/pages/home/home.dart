@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myAbos/pages/Inscription/inscription.dart';
 
 import 'buttons.dart';
 
@@ -43,8 +44,17 @@ class Home extends StatelessWidget {
               ),
               Row(
                 children: <Widget>[
-                  PrimaryButton(text: "Connexion"),
-                  PrimaryButton(text: "Inscription"),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(80, 0, 0, 0),
+                    child: PrimaryButton(
+                      text: "Connexion",
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                    child: PrimaryButton(
+                        text: "Inscription", newPage: Inscription()),
+                  )
                 ],
               ),
             ],
